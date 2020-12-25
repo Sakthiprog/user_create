@@ -8,7 +8,7 @@
   tasks:
     - name: creating user ID
       vars:
-        - password: "{{ lookup('password', './{{item.name}}password length=3') }}"
+        - password: "{{ lookup('password', './{{item.name}}password length=6') }}"
       user:
         name: "{{item.name}}"
         uid: "{{item.uid}}"
